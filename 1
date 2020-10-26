@@ -148,3 +148,13 @@ int Compress(uint8_t* input, uint8_t* output, uint32_t inputSize)
 
 	return (stream.BitPosition + 7) >> 3;
 }
+int main() {
+
+char* str = "This is an example for Rice coding";
+uint8_t* originalData = (uint8_t*)str;
+int originalDataSize = strlen(str);
+uint8_t* compressedData = (uint8_t*)malloc(originalDataSize + 1);
+
+int compressedDataSize = Compress(originalData, compressedData, originalDataSize);
+return 0;
+}
