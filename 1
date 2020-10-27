@@ -153,7 +153,7 @@ int main() {
 
 char* str = "This is an example for Rice coding";
 uint8_t* originalData = (uint8_t*)str;
-int originalDataSize = str [11];
+int originalDataSize = str [12];
 uint8_t* compressedData = (uint8_t*)malloc(originalDataSize + 1);
 
 int compressedDataSize = Compress(originalData, compressedData, originalDataSize);
